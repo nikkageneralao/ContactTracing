@@ -29,6 +29,7 @@ def add():
             "==============================================\n")
 
       full_name = input("Enter full name (FN, M.I., SN): ")
+      age = input("Enter your age: ")
       email = input("Enter active email address: ")
       phone = input("Enter your active phone number: ")
       address = (input("Enter your current address: "))
@@ -39,6 +40,7 @@ def add():
       public_place = (input("Have you recently been in a public or crowded place?: "))
       where = (input("Where? Enter complete address: "))
 
+      info["Age"] = age
       info["Email Address"] = email
       info["Phone Number"] = phone
       info["Address"] = address
@@ -60,8 +62,7 @@ def search():
       if name in personal_data:
             convert_key = list(info.keys())
             convert_value = list(info.values())
-            for key in personal_data.keys():
-                  print("\n               ||  Showing information of ", key, "  ||")
+            print("\n               ||  Showing information of ", name, "  ||")
             print("=============================================================================================\n")
             for convert_key, convert_value in zip(convert_key, convert_value):
                   print(f"{convert_key : >42}", ":", convert_value)
